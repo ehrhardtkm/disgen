@@ -29,7 +29,6 @@ const COLUMNS = [
   { key: 'density',          label: 'ρ (at/Å³)',    type: 'num',  fmt: (v) => v?.toFixed(3) ?? '' },
   { key: 'n_atoms',          label: 'N atoms',      type: 'num',  fmt: (v) => Number(v).toLocaleString() },
   { key: 'seed',             label: 'Seed',         type: 'num',  fmt: (v) => String(v) },
-  { key: 'n_iter',           label: 'N iter',       type: 'num',  fmt: (v) => String(v) },
   { key: 'max_force',        label: '|F|_max',      type: 'num',  fmt: (v) => v?.toFixed(3) ?? '' },
   { key: 'generated_at',     label: 'Generated',    type: 'str',  fmt: (v) => (v ?? '').slice(0, 10) },
   { key: 'xyz_path',         label: '↓',            type: 'download', sortable: false },

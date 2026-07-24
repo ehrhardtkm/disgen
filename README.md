@@ -4,7 +4,7 @@ A browser for a large sample dataset of **disordered atomic structures** spannin
 order→disorder spectrum (crystalline · nanocrystalline · LRO · MRO · SRO · amorphous),
 generated with the disgen pipeline.
 
-**Live:** https://ehrdt.github.io/disgen/
+**Live:** https://ehrhardtkm.github.io/disgen/
 
 > ⚠️ **Provisional / preview.** This dataset is still being finalized — the MRO regime has a
 > known relative-density issue and will be regenerated. Structures downloaded through the
