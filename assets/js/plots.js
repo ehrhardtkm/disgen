@@ -372,8 +372,9 @@ const G3_SCALE = [
 
 function g3Plot(divId, payload, tripletKey, zMax, shell) {
   if (!payload.g3 || !payload.g3.length) {
-    document.getElementById(divId).innerHTML =
-      '<div class="plots-empty">g₃ unavailable — not yet computed</div>';
+    const el = document.getElementById(divId);
+    el.innerHTML = '<div class="plots-empty">g₃ unavailable — not yet computed</div>';
+    el.style.minHeight = '0';   // collapse the empty box (esp. on mobile)
     return Promise.resolve();
   }
   let label, z, r_g3, phi;

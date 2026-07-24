@@ -5,8 +5,8 @@
 // edits don't take effect even after a hard reload.  Bump VER below to
 // force a full module-graph refetch.
 import { initDB, query } from './db.js?v=24';
-import { renderPlotsForXYZ } from './plots.js?v=28';
-import { renderRegimePanel } from './regimes.js?v=26';
+import { renderPlotsForXYZ } from './plots.js?v=29';
+import { renderRegimePanel } from './regimes.js?v=27';
 import { StructureViewer } from './viewer.js?v=30';
 import { renderDPs } from './dps.js?v=30';
 import { downloadStructureXYZ, xyzqUrlFor } from './xyzdl.js?v=2';

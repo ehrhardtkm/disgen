@@ -117,7 +117,7 @@ export async function renderRegimePanel(row, hostElId) {
     annotations: hasMRO ? [{
       xref: 'paper', yref: 'paper', x: 0, y: 1.0,
       xanchor: 'left', yanchor: 'bottom', showarrow: false,
-      text: '⚠ MRO is provisional — density bug, will be regenerated',
+      text: '⚠ MRO provisional (density bug)',
       font: { size: 10, color: '#f0b541' },
     }] : [],
     xaxis: {
