@@ -232,7 +232,7 @@ export class StructureViewer {
     if (resetView) {
       this.viewer.zoomTo();
       // Default 3Dmol camera looks down -z; rotate so +x → into screen
-      // (yz plane visible) — matches the tricor docs orientation.
+      // (yz plane visible) — matches the atomode docs orientation.
       this.viewer.rotate(90, 'y', 0);
     }
     this.viewer.render();

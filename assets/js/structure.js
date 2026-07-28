@@ -28,7 +28,7 @@ function renderMetadata(row) {
   document.getElementById('title').textContent =
     `${row.composition} · ${row.mp_id}`;
   document.getElementById('subtitle').textContent = row.structure_id;
-  document.title = `disgen — ${row.structure_id}`;
+  document.title = `atomode browser — ${row.structure_id}`;
 
   const badges = document.getElementById('badges');
   badges.innerHTML = '';   // regime + seed now live in the dl below
@@ -93,9 +93,9 @@ function renderMetadata(row) {
   });
 }
 
-// Polyhedra view: still uses the tricor Three.js template served in an
+// Polyhedra view: still uses the atomode Three.js template served in an
 // iframe (that's the visualisation the user liked for grain boundaries).
-// Files above this byte-count are gated behind a click since the tricor
+// Files above this byte-count are gated behind a click since the atomode
 // template parses the whole atom set into a Three.js InstancedMesh
 // synchronously — 40+ MB inline JSON freezes the tab on load.
 //
@@ -117,7 +117,7 @@ async function loadStructureViewer(row) {
 
   function polyUrl() {
     const url = xyzPath.replace(/\.xyz$/, '.poly.html');
-    // Cache-bust on every viewer template change — the tricor Three.js
+    // Cache-bust on every viewer template change — the atomode Three.js
     // template patches change occasionally (slice postMessage, low-poly,
     // outline drop) and Chrome caches 40 MB iframe HTMLs aggressively.
     // Bump the `v` value whenever build_viewer_html.py's template
@@ -178,7 +178,7 @@ async function loadStructureViewer(row) {
   }
 
   async function showPoly() {
-    // Polyhedra ALWAYS goes through the gate — the tricor Three.js
+    // Polyhedra ALWAYS goes through the gate — the atomode Three.js
     // template renders instanced meshes for every atom + polyhedron,
     // which can take 5-60 s to first-frame at production scale.  The
     // gate makes the "I meant to trigger this heavy render" explicit.

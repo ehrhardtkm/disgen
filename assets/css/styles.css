@@ -260,7 +260,7 @@ td.regime-MRO::after { content: " ⚠"; }
   width: 100%;
   height: 360px;
   border: 0;
-  background: #f7f8f5;   /* matches the tricor viewer background */
+  background: #f7f8f5;   /* matches the atomode viewer background */
 }
 .viewer-3dmol {
   position: relative;   /* 3Dmol positions its canvas absolutely inside */

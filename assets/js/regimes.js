@@ -38,7 +38,7 @@ export async function renderRegimePanel(row, hostElId) {
   const composition = row.composition.replace(/'/g, "''");
   const mp_id       = row.mp_id.replace(/'/g, "''");
 
-  // Pull EVERY seed for (composition, mp_id) — the tricor docs plot shows
+  // Pull EVERY seed for (composition, mp_id) — the atomode docs plot shows
   // seeds as scatter points along each regime column, not a single bar.
   const rows = await query(`
     select structure_id, regime, seed,

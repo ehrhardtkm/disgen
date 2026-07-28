@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>disgen — downloads</title>
+  <title>atomode browser — downloads</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="assets/css/styles.css?v=30">
 </head>
 <body>
   <header class="site-header">
-    <a href="index.html" class="brand">disgen</a>
+    <a href="index.html" class="brand">atomode browser</a>
     <nav>
       <a href="index.html">Browse</a>
       <a href="downloads.html" class="active">Downloads</a>
@@ -69,9 +69,11 @@
   </main>
 
   <script>
-    const HOST = `${window.location.protocol}//${window.location.host}`;
-    document.getElementById('r-csv').textContent = `wget ${HOST}/data/dataset.csv`;
-    document.getElementById('r-parquet-inline').textContent = 'data/dataset.parquet';
+    // Resolve against the page URL, not the bare host — the site is served
+    // from a subpath (…/disgen/, and …/atomode-data/browse/ after the move),
+    // so building from protocol+host alone drops the prefix and 404s.
+    const CSV_URL = new URL('data/dataset.csv', window.location.href).toString();
+    document.getElementById('r-csv').textContent = `wget ${CSV_URL}`;
   </script>
 </body>
 </html>
